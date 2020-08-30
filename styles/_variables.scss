@@ -1,0 +1,23 @@
+// Font Sizes
+$font-med: 1.125rem; //18px
+$font-small: 0.875rem; // 14px normal body font
+$font-lg: 1.25rem; // 20px
+$font-xlg: 3.25rem; //52px
+
+// ## Colors
+
+// ### Primary
+
+$darkBlue-intro: hsl(217, 28%, 15%); // (intro and email sign up background)
+$darkBlue-main: hsl(218, 28%, 13%); //(main background)
+$darkBlue-footer: hsl(216, 53%, 9%); //(footer background)
+$darkBlue-testimonials: hsl(219, 30%, 18%); //(testimonials background)
+
+// ### Accent
+
+$cyan: hsl(176, 68%, 64%); //(inside call-to-action gradient)
+$blue: hsl(198, 60%, 50%); //(inside call-to-action gradient)
+
+// ### Neutral
+
+$white: hsl(0, 0%, 100%);

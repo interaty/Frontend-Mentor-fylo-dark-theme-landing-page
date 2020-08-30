@@ -1,0 +1,118 @@
+.footer {
+  background-color: $darkBlue-footer;
+  padding-top: 230px;
+
+  @include breakpoint-up(large) {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "logo logo logo logo logo"
+      "lorem phone nav1 nav2 social"
+      "lorem email nav1 nav2 social";
+
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  p {
+    margin: 0;
+  }
+  &__logo {
+    width: 160px;
+    margin-left: 1.1rem;
+    margin-right: 1.1rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    grid-area: logo;
+    @include breakpoint-up(large) {
+      display: block;
+    }
+  }
+  &__lorem {
+    grid-area: lorem;
+
+    @include breakpoint-down(medium) {
+      max-width: 400px;
+    }
+  }
+  &__phone {
+    grid-area: phone;
+  }
+  &__email {
+    grid-area: email;
+  }
+  &__nav1 {
+    grid-area: nav1;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    @include breakpoint-up(large) {
+      padding: 0;
+    }
+  }
+  &__nav2 {
+    grid-area: nav2;
+    padding-bottom: 3rem;
+    @include breakpoint-up(large) {
+      padding: 0;
+    }
+  }
+  &__social {
+    grid-area: social;
+    text-align: center;
+    font-size: 0.8rem;
+    .middle {
+      margin: 0 0.3rem;
+    }
+    a {
+      border: 2px solid white;
+      padding: 0.2rem 0.4rem;
+      border-radius: 50%;
+    }
+
+    a:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__lorem p,
+  &__phone p,
+  &__email p {
+    margin-left: 1rem;
+    @include breakpoint-up(large) {
+      line-height: 1.8;
+    }
+  }
+
+  &__lorem,
+  &__phone,
+  &__email {
+    display: flex;
+    padding-bottom: 1.5rem;
+    margin-left: 1.1rem;
+    margin-right: 1.1rem;
+
+    @include breakpoint-up(large) {
+      margin-right: 5rem;
+    }
+
+    img {
+      width: 15px;
+      height: 17px;
+    }
+  }
+
+  &__nav1,
+  &__nav2 {
+    display: flex;
+    flex-direction: column;
+    a {
+      padding-bottom: 1.2rem;
+      padding-left: 1.1rem;
+      padding-right: 1.1rem;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

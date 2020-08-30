@@ -1,0 +1,57 @@
+.features {
+  padding-top: 65px;
+  text-align: center;
+
+  @include breakpoint-up(medium) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 0;
+  }
+
+  &__boxes {
+    @include breakpoint-up(medium) {
+      max-width: 430px;
+      margin: 0 auto;
+
+      img {
+        height: 35%;
+      }
+    }
+
+    h2 {
+      font-weight: 700;
+      padding-top: 40px;
+      font-size: 1.1rem;
+
+      @include breakpoint-up(medium) {
+        padding-top: 30px;
+        padding-bottom: 5px;
+      }
+
+      padding-bottom: 10px;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+  }
+
+  &__box1 {
+    @include breakpoint-up(medium) {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__box2 {
+    @include breakpoint-up(medium) {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+
+  &__box3 {
+  }
+  &__box4 {
+  }
+}

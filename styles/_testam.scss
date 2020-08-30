@@ -1,0 +1,80 @@
+.testam {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include breakpoint-down(medium) {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 620px;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+  @include breakpoint-up(large) {
+    justify-content: space-around;
+    flex-direction: row;
+    max-width: 1050px;
+    margin: 0 auto;
+    margin-top: 130px;
+    height: 250px;
+  }
+
+  &__container {
+    background: $darkBlue-testimonials;
+    padding: 15px 20px;
+    width: 320px;
+    border-radius: 5px;
+    -webkit-box-shadow: 7px 7px 13px -11px rgba(0, 0, 0, 0.71);
+    -moz-box-shadow: 7px 7px 13px -11px rgba(0, 0, 0, 0.71);
+    box-shadow: 7px 7px 13px -11px rgba(0, 0, 0, 0.71);
+
+    .testam__text {
+      p {
+        line-height: 1.5;
+        font-size: 0.75rem;
+      }
+    }
+
+    .testam__user {
+      display: flex;
+      align-items: center;
+      height: 40px;
+      img {
+        width: 30px;
+        border-radius: 50%;
+      }
+      .user__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 10px;
+        h5,
+        h6 {
+          margin: 0;
+        }
+        h5 {
+          padding-bottom: 5px;
+          letter-spacing: 1px;
+        }
+
+        h6 {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}
+
+.backticks {
+  background-image: url(/images/bg-quotes.png);
+  background-size: 10%;
+  background-repeat: no-repeat;
+  background-position: 20px 5px;
+
+  @include breakpoint-up(large) {
+    background-size: 5%;
+    background-position: 5px 8px;
+  }
+}
